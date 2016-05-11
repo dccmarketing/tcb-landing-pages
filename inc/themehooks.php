@@ -6,7 +6,7 @@
  * @package DocBlock
  * @author Slushman <chris@slushman.com>
  */
-class function_names_Themehooks {
+class tcb_landing_Themehooks {
 
 	/**
 	 * Constructor
@@ -25,8 +25,8 @@ class function_names_Themehooks {
 		add_action( 'tha_header_top', 					array( $this, 'header_wrap_start' ), 10 );
 		add_action( 'tha_header_top', 					array( $this, 'site_branding_start' ), 15 );
 
-		add_action( 'function_names_header_content', 	array( $this, 'title_site' ), 10 );
-		add_action( 'function_names_header_content', 	array( $this, 'site_description' ), 15 );
+		add_action( 'tcb_landing_header_content', 	array( $this, 'title_site' ), 10 );
+		add_action( 'tcb_landing_header_content', 	array( $this, 'site_description' ), 15 );
 
 		add_action( 'tha_header_bottom', 				array( $this, 'site_branding_end' ), 85 );
 		add_action( 'tha_header_bottom', 				array( $this, 'header_wrap_end' ), 90 );
@@ -41,19 +41,19 @@ class function_names_Themehooks {
 
 		add_action( 'tha_content_while_after', 			array( $this, 'posts_nav' ) );
 
-		add_action( 'function_names_footer_content', 	array( $this, 'footer_content' ) );
+		add_action( 'tcb_landing_footer_content', 	array( $this, 'footer_content' ) );
 
 		add_action( 'tha_content_top', 					array( $this, 'breadcrumbs' ) );
 
 		add_action( 'tha_entry_after', 					array( $this, 'comments' ), 10 );
 
-		add_action( 'function_names_404_before', 		array( $this, 'title_404' ), 10 );
+		add_action( 'tcb_landing_404_before', 		array( $this, 'title_404' ), 10 );
 
-		add_action( 'function_names_404_content', 		array( $this, 'add_search' ), 10 );
-		add_action( 'function_names_404_content', 		array( $this, 'four_04_posts_widget' ), 15 );
-		add_action( 'function_names_404_content', 		array( $this, 'four_04_categories' ), 20 );
-		add_action( 'function_names_404_content', 		array( $this, 'four_04_archives' ), 25 );
-		add_action( 'function_names_404_content', 		array( $this, 'four_04_tag_cloud' ), 30 );
+		add_action( 'tcb_landing_404_content', 		array( $this, 'add_search' ), 10 );
+		add_action( 'tcb_landing_404_content', 		array( $this, 'four_04_posts_widget' ), 15 );
+		add_action( 'tcb_landing_404_content', 		array( $this, 'four_04_categories' ), 20 );
+		add_action( 'tcb_landing_404_content', 		array( $this, 'four_04_archives' ), 25 );
+		add_action( 'tcb_landing_404_content', 		array( $this, 'four_04_tag_cloud' ), 30 );
 
 		add_action( 'entry_header_content', 			array( $this, 'title_entry' ), 10 );
 		add_action( 'entry_header_content', 			array( $this, 'title_page' ), 10 );
@@ -90,7 +90,7 @@ class function_names_Themehooks {
 	/**
 	 * Adds a search form
 	 *
-	 * @hooked 		function_names_404_content 		15
+	 * @hooked 		tcb_landing_404_content 		15
 	 *
 	 * @return 		mixed 		Search form markup
 	 */
@@ -124,7 +124,7 @@ class function_names_Themehooks {
 	/**
 	 * Returns the appropriate breadcrumbs.
 	 *
-	 * @hooked		function_names_wrap_content
+	 * @hooked		tcb_landing_wrap_content
 	 *
 	 * @return 		mixed 				WooCommerce breadcrumbs, then Yoast breadcrumbs
 	 */
@@ -177,7 +177,7 @@ class function_names_Themehooks {
 	/**
 	 * Adds the copyright and credits to the footer content.
 	 *
-	 * @hooked 		function_names_footer_content
+	 * @hooked 		tcb_landing_footer_content
 	 *
 	 * @return 		mixed 									The footer markup
 	 */
@@ -215,7 +215,7 @@ class function_names_Themehooks {
 	/**
 	 * Adds the  to the 404 page content.
 	 *
-	 * @hooked 		function_names_404_content		25
+	 * @hooked 		tcb_landing_404_content		25
 	 *
 	 * @return 		mixed 							Markup for the archives
 	 */
@@ -233,14 +233,14 @@ class function_names_Themehooks {
 	/**
 	 * Adds the  to the 404 page content.
 	 *
-	 * @hooked 		function_names_404_content		20
+	 * @hooked 		tcb_landing_404_content		20
 	 *
 	 * @return 		mixed 							The categories widget
 	 */
 	public function four_04_categories() {
 
 		if ( ! is_404() ) { return; }
-		if ( ! function_names_categorized_blog() ) { return; }
+		if ( ! tcb_landing_categorized_blog() ) { return; }
 
 		?><div class="widget widget_categories">
 			<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'tcb-landing' ); ?></h2>
@@ -262,7 +262,7 @@ class function_names_Themehooks {
 	/**
 	 * Adds the Recent Posts widget to the 404 page.
 	 *
-	 * @hooked 		function_names_404_content 		15
+	 * @hooked 		tcb_landing_404_content 		15
 	 *
 	 * @return 		mixed 							The Recent Posts widget
 	 */
@@ -277,7 +277,7 @@ class function_names_Themehooks {
 	/**
 	 * Adds the  to the 404 page content.
 	 *
-	 * @hooked 		function_names_404_content		30
+	 * @hooked 		tcb_landing_404_content		30
 	 *
 	 * @return 		mixed 							The tag cloud widget
 	 */
@@ -375,7 +375,7 @@ class function_names_Themehooks {
 
 		?><div class="entry-meta"><?php
 
-			function_names_posted_on();
+			tcb_landing_posted_on();
 
 		?></div><!-- .entry-meta --><?php
 
@@ -428,7 +428,7 @@ class function_names_Themehooks {
 	/**
 	 * Adds the site description markup
 	 *
-	 * @hooked 		function_names_header_content 		15
+	 * @hooked 		tcb_landing_header_content 		15
 	 *
 	 * @return 		mixed 								The site description markup
 	 */
@@ -460,7 +460,7 @@ class function_names_Themehooks {
 	/**
 	 * The 404 page title markup
 	 *
-	 * @hooked 		function_names_404_content 		10
+	 * @hooked 		tcb_landing_404_content 		10
 	 *
 	 * @return 		mixed 							The 440 page title
 	 */
@@ -591,7 +591,7 @@ class function_names_Themehooks {
 	/**
 	 * Adds the site title markup
 	 *
-	 * @hooked 		function_names_header_content 		10
+	 * @hooked 		tcb_landing_header_content 		10
 	 *
 	 * @return 		mixed 								The site title markup
 	 */
@@ -611,6 +611,6 @@ class function_names_Themehooks {
 
 } // class
 
-$function_names_Themehooks = new function_names_Themehooks();
+$tcb_landing_Themehooks = new tcb_landing_Themehooks();
 
 

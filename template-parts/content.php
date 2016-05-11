@@ -42,7 +42,7 @@
 
 	?><footer class="entry-footer"><?php
 
-		function_names_entry_footer();
+		tcb_landing_entry_footer();
 
 	?></footer><!-- .entry-footer --><?php
 

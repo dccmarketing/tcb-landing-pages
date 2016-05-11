@@ -7,7 +7,7 @@
  * @package DocBlock
  */
 
-if ( ! function_exists( 'function_names_setup' ) ) :
+if ( ! function_exists( 'tcb_landing_setup' ) ) :
 
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -16,7 +16,7 @@ if ( ! function_exists( 'function_names_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function function_names_setup() {
+	function tcb_landing_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -63,7 +63,7 @@ if ( ! function_exists( 'function_names_setup' ) ) :
 		) );*/
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'function_names_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'tcb_landing_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -93,11 +93,11 @@ if ( ! function_exists( 'function_names_setup' ) ) :
 			'social' => esc_html__( 'Social Links', 'tcb-landing' )
 		) );
 
-	} // function_names_setup()
+	} // tcb_landing_setup()
 
-endif; // function_names_setup
+endif; // tcb_landing_setup
 
-add_action( 'after_setup_theme', 'function_names_setup' );
+add_action( 'after_setup_theme', 'tcb_landing_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -106,13 +106,13 @@ add_action( 'after_setup_theme', 'function_names_setup' );
  *
  * @global 		int 		$content_width
  */
-function function_names_content_width() {
+function tcb_landing_content_width() {
 
-	$GLOBALS['content_width'] = apply_filters( 'function_names_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'tcb_landing_content_width', 640 );
 
-} // function_names_content_width()
+} // tcb_landing_content_width()
 
-add_action( 'after_setup_theme', 'function_names_content_width', 0 );
+add_action( 'after_setup_theme', 'tcb_landing_content_width', 0 );
 
 /**
  * Implement the Custom Header feature.
