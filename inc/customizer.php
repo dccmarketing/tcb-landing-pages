@@ -1,6 +1,6 @@
 <?php
 /**
- * Replace With Theme Name Customizer
+ * TCB Landing Pages Customizer
  *
  * Contains methods for customizing the theme customization screen.
  *
@@ -38,7 +38,7 @@ function tcb_landing_register_panels( $wp_customize ) {
 	$wp_customize->add_panel( 'theme_options',
 		array(
 			'capability'  		=> 'edit_theme_options',
-			'description'  		=> esc_html__( 'Options for Replace With Theme Name', 'tcb-landing' ),
+			'description'  		=> esc_html__( 'Options for TCB Landing Pages', 'tcb-landing' ),
 			'priority'  		=> 10,
 			'theme_supports'  	=> '',
 			'title'  			=> esc_html__( 'Theme Options', 'tcb-landing' ),
@@ -50,7 +50,7 @@ function tcb_landing_register_panels( $wp_customize ) {
 	$wp_customize->add_panel( 'theme_options',
 		array(
 			'capability'  		=> 'edit_theme_options',
-			'description'  		=> esc_html__( 'Options for Replace With Theme Name', 'tcb-landing' ),
+			'description'  		=> esc_html__( 'Options for TCB Landing Pages', 'tcb-landing' ),
 			'priority'  		=> 10,
 			'theme_supports'  	=> '',
 			'title'  			=> esc_html__( 'Theme Options', 'tcb-landing' ),
