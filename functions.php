@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Functions_File_Explained
  *
- * @package DocBlock
+ * @package TCB_Landing
  */
 
 if ( ! function_exists( 'tcb_landing_setup' ) ) :

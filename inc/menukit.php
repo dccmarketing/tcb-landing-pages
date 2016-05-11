@@ -3,7 +3,7 @@
 /**
  * A class of helpful menu-related functions
  *
- * @package DocBlock
+ * @package TCB_Landing
  * @author Slushman <chris@slushman.com>
  */
 class tcb_landing_Menukit {

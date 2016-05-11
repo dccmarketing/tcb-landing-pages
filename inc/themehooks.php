@@ -3,7 +3,7 @@
 /**
  * A class of methods using hooks in the theme.
  *
- * @package DocBlock
+ * @package TCB_Landing
  * @author Slushman <chris@slushman.com>
  */
 class tcb_landing_Themehooks {

@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package DocBlock
+ * @package TCB_Landing
  */
 
 if ( ! function_exists( 'tcb_landing_posted_on' ) ) :
