@@ -28,7 +28,7 @@
 
 			?><p><?php
 
-				printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'text-domain' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) );
+				printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'tcb-landing' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) );
 
 			?></p><?php
 
@@ -36,7 +36,7 @@
 
 			?><p><?php
 
-				esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'text-domain' );
+				esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'tcb-landing' );
 
 			?></p><?php
 
@@ -46,7 +46,7 @@
 
 			?><p><?php
 
-				esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'text-domain' );
+				esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'tcb-landing' );
 
 			?></p><?php
 
